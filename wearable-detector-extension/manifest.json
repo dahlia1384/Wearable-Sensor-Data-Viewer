@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Wearable Sensor Data Detector",
+  "version": "1.0.0",
+  "description": "Detects accelerometer, heart-rate, SpO₂, and temperature data files in GitHub repos and shows visual summaries.",
+  "permissions": ["activeTab", "storage"],
+  "host_permissions": [
+    "https://github.com/*",
+    "https://raw.githubusercontent.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.svg",
+      "48": "icons/icon48.svg",
+      "128": "icons/icon128.svg"
+    },
+    "default_title": "Wearable Sensor Detector"
+  },
+  "icons": {
+    "16": "icons/icon16.svg",
+    "48": "icons/icon48.svg",
+    "128": "icons/icon128.svg"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
