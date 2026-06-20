@@ -58,18 +58,20 @@
     border-color: #1e293b;
     color: #e2e8f0;
   }
-  .wdd-subtitle { background: #1e293b !important; color: #94a3b8 !important; border-color: #1e293b !important; }
-  .wdd-item { border-color: #1e293b !important; }
-  .wdd-item-hdr { background: #0f172a !important; }
-  .wdd-fname { color: #93c5fd !important; }
-  .wdd-meta { background: #1e293b !important; color: #94a3b8 !important; }
-  .wdd-empty { color: #64748b !important; }
-  .wdd-col { color: #e2e8f0 !important; }
-  .wdd-stats { color: #94a3b8 !important; }
-  .wdd-err { background: #1e1015 !important; color: #f87171 !important; }
+  .wdd-subtitle  { background: #1e293b !important; color: #94a3b8 !important; border-color: #1e293b !important; }
+  .wdd-item      { border-color: #1e293b !important; }
+  .wdd-item-hdr  { background: #0f172a !important; }
+  .wdd-fname     { color: #93c5fd !important; }
+  .wdd-meta      { background: #1e293b !important; color: #94a3b8 !important; }
+  .wdd-empty     { color: #64748b !important; }
+  .wdd-col       { color: #e2e8f0 !important; }
+  .wdd-stats     { color: #94a3b8 !important; }
+  .wdd-err       { background: #1e1015 !important; color: #f87171 !important; }
   .wdd-close:hover { background: #1e293b !important; }
-  .wdd-header { border-color: #1e293b !important; }
-  .wdd-analysis { border-color: #1e293b !important; }
+  .wdd-header    { border-color: #1e293b !important; }
+  .wdd-analysis  { border-color: #1e293b !important; }
+  .wdd-canvas    { background: #1e293b !important; }
+  .wdd-anomaly-row { border-color: #1e293b !important; background: #0f172a !important; }
 }
 
 .wdd-header {
@@ -262,6 +264,41 @@
   background: #f8fafc;
 }
 
-@media (prefers-color-scheme: dark) {
-  .wdd-canvas { background: #1e293b; }
+/* ── Anomaly badges ──────────────────────────────────────────────────────────── */
+
+.wdd-anomaly-row {
+  padding: 4px 10px;
+  border-top: 1px solid #f1f5f9;
+  background: #fafafa;
+}
+
+.wdd-anomaly-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid;
+  cursor: default;
+  white-space: nowrap;
+}
+
+.wdd-anomaly-low {
+  color: #92400e;
+  background: #fffbeb;
+  border-color: #fbbf2480;
+}
+
+.wdd-anomaly-medium {
+  color: #9a3412;
+  background: #fff7ed;
+  border-color: #fb923c80;
+}
+
+.wdd-anomaly-high {
+  color: #991b1b;
+  background: #fef2f2;
+  border-color: #f8717180;
 }
